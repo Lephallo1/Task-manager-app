@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            animation: gradientBackground 10s ease infinite;
+            background: linear-gradient(45deg, #6200ea, #03dac6, #ff0266, #ffde03);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: rgba(98, 0, 234, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .task:last-child {
+            border-bottom: none;
+        }
+
+        .task img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .task h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #6200ea;
+        }
+
+        .task p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .add-task-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .add-task-btn:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+
+    <div class="container">
+        <div class="task">
+            <img src="Project-Proposal.jpg" alt="Task Icon">
+            <div>
+                <h3>Complete Project Proposal</h3>
+                <p>Deadline: 2023-10-15</p>
+            </div>
+        </div>
+
+        <!-- REPLACE THE IMAGE SOURCE BELOW WITH YOUR OWN IMAGE URL OR PATH -->
+        <div class="task">
+            <img src="images.jpg" alt="Task Icon">
+            <div>
+                <h3>Prepare Presentation</h3>
+                <p>Deadline: 2023-10-20</p>
+            </div>
+        </div>
+
+        <!-- REPLACE THE IMAGE SOURCE BELOW WITH YOUR OWN IMAGE URL OR PATH -->
+        <div class="task">
+            <img src="1_wOgkJF6VkG2zuvG4fNhyDQ.png" alt="Task Icon">
+            <div>
+                <h3>Review Codebase</h3>
+                <p>Deadline: 2023-10-25</p>
+            </div>
+        </div>
+
+        <a href="add-task.html" class="add-task-btn">Add New Task</a>
+    </div>
+</body>
+</html>

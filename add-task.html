@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Add Task</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            animation: gradientBackground 10s ease infinite;
+            background: linear-gradient(45deg, #6200ea, #03dac6, #ff0266, #ffde03);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: rgba(98, 0, 234, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #3700b3;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #6200ea;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Add New Task</h1>
+    </header>
+
+    <div class="container">
+        <form id="task-form">
+            <div class="form-group">
+                <label for="task-title">Task Title</label>
+                <input type="text" id="task-title" placeholder="Enter task title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="task-description">Task Description</label>
+                <textarea id="task-description" placeholder="Enter task description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="task-deadline">Deadline</label>
+                <input type="date" id="task-deadline" required>
+            </div>
+
+            <div class="form-group">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Task</button>
+        </form>
+
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('task-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Task added successfully!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
